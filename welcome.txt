@@ -1,0 +1,48 @@
+// File: Calculator.java
+
+public class Calculator {
+
+    // Method for addition
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    // Method for subtraction
+    public double subtract(double a, double b) {
+        return a - b;
+
+    }
+
+    // Method for multiplication
+    public double multiply(double a, double b) {
+        return a * b;
+
+    }
+
+    // Method for division
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Division by zero is not allowed.");
+        }
+        return a / b;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        double num1 = 10;
+        double num2 = 5;
+
+        // Perform calculations
+        double sum = calculator.add(num1, num2);
+        double difference = calculator.subtract(num1, num2);
+        double product = calculator.multiply(num1, num2);
+        double quotient = calculator.divide(num1, num2);
+
+        // Print results
+        System.out.println("Addition: " + sum);
+        System.out.println("Subtraction: " + difference);
+        System.out.println("Multiplication: " + product);
+        System.out.println("Division: " + quotient);
+    }
+}
